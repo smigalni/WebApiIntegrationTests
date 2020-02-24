@@ -125,7 +125,7 @@ namespace MyIntegrationTests.Controllers
 
             content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
 
-            var request = "/WeatherForecast/ReadFileTest2/collection.json";
+            var request = "/WeatherForecast/ReadFile/collection.json";
 
             TestServerFixture
                .Client.DefaultRequestHeaders.Add("Accept-Encoding", "gzip, deflate, br");

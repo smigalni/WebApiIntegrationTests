@@ -25,7 +25,7 @@ namespace API.Controllers
         {
             return Ok();
         }
-        [HttpPost("ReadFileTest2/{fileName}")]
+        [HttpPost("ReadFile/{fileName}")]
         public IActionResult ReadFile(IFormFile file, string fileName, CancellationToken cancellationToken)
         {
             return Ok();
