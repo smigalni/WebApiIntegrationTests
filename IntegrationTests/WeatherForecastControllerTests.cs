@@ -55,24 +55,24 @@ namespace MyIntegrationTests.Controllers
         }     
 
       
-        [Fact]
-        public async Task TryingPostWithFile()
-        {
-            var path = "TestFiles\\collection.json";
+        //[Fact]
+        //public async Task TryingPostWithFile()
+        //{
+        //    var path = "TestFiles\\collection.json";
 
-            using var form = new MultipartFormDataContent();
-            using var fileContent = new ByteArrayContent(await File.ReadAllBytesAsync(path));
+        //    using var form = new MultipartFormDataContent();
+        //    using var fileContent = new ByteArrayContent(await File.ReadAllBytesAsync(path));
 
-            fileContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+        //    fileContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var request = "/WeatherForecast/ReadFileTest";
+        //    var request = "/WeatherForecast/ReadFileTest";
 
-            var response = await TestServerFixture
-               .Client
-               .PostAsync(TestServerFixture.Client.BuildPath(request, Output), form);
+        //    var response = await TestServerFixture
+        //       .Client
+        //       .PostAsync(TestServerFixture.Client.BuildPath(request, Output), form);
 
-            response.EnsureSuccessStatusCode();
-        }
+        //    response.EnsureSuccessStatusCode();
+        //}
 
         [Fact]
         public async Task TryingPostWithFile2()
